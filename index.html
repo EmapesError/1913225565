@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff; /* Set background to white */
+            color: #333; /* Dark text for better contrast on white background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+            color: #ff6600; /* Header color */
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-in-out;
+            color: #555; /* Slightly lighter color for the paragraph */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Arrange buttons in a column */
+            align-items: center; /* Center buttons */
+        }
+
+        .button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #ffffff; /* Text color for the button */
+            font-size: 1.2rem;
+            cursor: pointer;
+            background-color: #ff6600; /* Orange background for buttons */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+            position: relative;
+            overflow: hidden;
+            margin: 10px 0; /* Add margin between buttons */
+        }
+
+        .button:hover {
+            background-color: #cc5200; /* Darker shade of orange on hover */
+            transform: translateY(-3px);
+        }
+
+        .button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+            z-index: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        .button:hover::after {
+            width: 400%;
+            height: 400%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to UniteHost!</h1>
+        <p>Your ultimate game hosting solution.</p>
+        <div class="button-container">
+            <a href="YOUR_DISCORD_LINK" class="button"><span>Join Our Discord</span></a>
+            <a href="YOUR_WEBSITE_LINK" class="button"><span>Visit Our Website</span></a>
+        </div>
+    </div>
+</body>
+</html>
